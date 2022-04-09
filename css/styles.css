@@ -79,11 +79,6 @@ ul {
   margin: -1px;
 }
 .button {
-  border: none;
-  font-family: inherit;
-  cursor: pointer;
-}
-.button-main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,44 +87,47 @@ ul {
   width: 200px;
   height: 50px;
   padding: 0;
+  border: none;
+  cursor: pointer;
   box-shadow: var(--button-shadow);
   border-radius: 4px;
   color: var(--regular-white-color);
   background-color: var(--accent-color);
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button-main:hover,
-.button-main:focus {
+.button:hover,
+.button:focus {
   background-color: var(--button-hover-color);
 }
 
 /* Лого */
 .logo {
   display: block;
-  color: var(--accent-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
-.logo-header {
+.logo__label {
+  color: var(--accent-color);
+}
+.logo__label--header {
   color: var(--regular-black-color);
 }
-.logo-footer {
+.logo__label--footer {
   color: var(--regular-white-color);
 }
 /* Header */
 .header {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: var(--header-border-line-color);
+  border-bottom: 1px solid var(--header-border-line-color);
 }
-.head-page {
+.container--header {
   display: flex;
   align-items: center;
 }
@@ -138,49 +136,46 @@ ul {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-.nav {
+.navigation {
   display: flex;
 }
-.nav-list,
-.contact-list {
+.navigation__list,
+.contacts {
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
 /* Основная навигация */
-.nav-list {
+.navigation__list {
   display: flex;
 }
-.nav-item:not(:last-child) {
+.navigation__item:not(:last-child) {
   margin-right: 50px;
 }
-.nav-link {
+.navigation__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--title-text-color);
 }
-.nav-link,
-.contact-link,
-.footer-link,
-.footer-link.adress {
+.navigation__link,
+.contacts__link,
+.adress__link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link:hover,
-.nav-link:focus,
-.contact-link:hover,
-.contact-link:focus,
-.footer-link:hover,
-.footer-link:focus,
-.footer-link.adress:hover,
-.footer-link.adress:focus {
+.navigation__link:hover,
+.navigation__link:focus,
+.contacts__link:hover,
+.contacts__link:focus,
+.adress__link:hover,
+.adress__link:focus {
   color: var(--accent-color);
 }
-.nav-link.current {
+.navigation__link--current {
   position: relative;
   color: var(--accent-color);
 }
-.nav-link.current::after {
+.navigation__link--current::after {
   display: inline-block;
   content: "";
   position: absolute;
@@ -192,21 +187,21 @@ ul {
   background-color: var(--accent-color);
 }
 /* Контактная информация */
-.contact-list {
+.contacts {
   display: flex;
   margin-left: auto;
 }
-.contact-item:not(:last-child) {
+.contacts__item:not(:last-child) {
   margin-right: 30px;
 }
-.contact-link {
+.contacts__link {
   display: flex;
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
 }
-.contact-icon {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -350,10 +345,10 @@ ul {
   display: flex;
   justify-content: center;
 }
-.social-item:not(:last-child) {
+.social-list__item:not(:last-child) {
   margin-right: 10px;
 }
-.social-link {
+.social-list__link {
   height: 44px;
   width: 44px;
   display: flex;
@@ -365,12 +360,12 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-link:hover,
-.social-link:focus {
+.social-list__link:hover,
+.social-list__link:focus {
   color: var(--regular-white-color);
   background-color: var(--accent-color);
 }
-.social-icon {
+.social-list__icon {
   fill: currentColor;
 }
 /* Постоянные клиенты */
@@ -407,79 +402,79 @@ ul {
   display: inline-block;
   fill: currentColor;
 }
+
 /* Footer */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-background-color);
 }
-.footer > .container {
+.container--footer {
   display: flex;
   align-items: baseline;
 }
-.footer .logo {
-  margin-bottom: 20px;
+.adress {
+  margin-top: 20px;
 }
-.footer-list {
+.adress__list {
   font-style: normal;
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.footer-link.adress {
-  color: var(--regular-white-color);
-}
-.footer-link {
+.adress__link {
   color: var(--contact-text-color);
 }
-.footer-item:not(:last-child) {
+.adress__link--map {
+  color: var(--regular-white-color);
+}
+
+.adress__item:not(:last-child) {
   margin-bottom: 9px;
 }
-.footer-subtitle {
+.subtitle--footer {
   margin-bottom: 20px;
   color: var(--regular-white-color);
   line-height: 1.14;
   text-transform: uppercase;
 }
-.footer-social {
+.social-block {
   margin-left: 70px;
 }
 .footer .social-list {
   padding: 0;
 }
-.footer .social-link {
+.social-list__link--footer {
   color: var(--regular-white-color);
   background-color: var(--footer-social-background-color);
 }
-.footer .social-link:hover,
-.footer .social-link:focus {
+.social-list__link--footer:hover,
+.social-list__link--footer:focus {
   background-color: var(--accent-color);
 }
-.footer-subscribe-section {
+.subscribe-section {
   margin-left: auto;
 }
-.footer-form {
+.subscribe-form {
   display: flex;
 }
-.footer-input {
+.subscribe-form__input {
   width: 358px;
   height: 50px;
   margin-right: 12px;
   padding-left: 16px;
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--button-shadow);
+  border-radius: 4px;
 }
-.footer-input::placeholder {
+.subscribe-form__input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: var(--contact-text-color);
 }
-.footer-input {
-  box-shadow: var(--button-shadow);
-  border-radius: 4px;
-}
-.footer-button-icon {
+.button__icon {
   margin-left: 10px;
   fill: var(--regular-white-color);
 }
