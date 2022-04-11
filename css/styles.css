@@ -97,15 +97,15 @@ ul {
   padding: 0;
   border: none;
   cursor: pointer;
-  box-shadow: var(--button-shadow);
-  border-radius: 4px;
   color: var(--regular-white-color);
   background-color: var(--accent-color);
+  box-shadow: var(--button-shadow);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
@@ -472,24 +472,17 @@ ul {
 }
 /* Портфолио */
 /* Примеры работ */
-.examples {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 /* Портфолио button */
-.filtre-list {
+.filtre {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
-.filtre-item:not(:last-child) {
+.filtre__item:not(:last-child) {
   margin-right: 8px;
 }
-.filtre-button {
+.portfolio-button {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
   padding: 6px 22px;
   color: var(--title-text-color);
   background-color: var(--secondary-background-color);
@@ -497,14 +490,16 @@ ul {
   font-size: 16px;
   letter-spacing: 0.03em;
   line-height: 1.63;
-  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.filtre-button.current,
-.filtre-button:hover,
-.filtre-button:focus {
+.portfolio-button--current,
+.portfolio-button:hover,
+.portfolio-button:focus {
   color: var(--regular-white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -517,20 +512,20 @@ ul {
   margin-left: calc((-1) * var(--item-gap));
   margin-top: calc((-1) * var(--item-gap));
 }
-.example-item {
+.example-card {
   flex-basis: calc(100% / 3 - var(--item-gap));
   margin-left: var(--item-gap);
   margin-top: var(--item-gap);
 }
-.example-link {
+.example-card__link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.example-thumb {
+.example-card__thumb {
   position: relative;
   overflow: hidden;
 }
-.example-actions {
+.example-card__actions {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -539,7 +534,7 @@ ul {
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.example-actions-text {
+.example-card__actions-text {
   width: 322px;
   height: 168px;
   position: absolute;
@@ -551,32 +546,32 @@ ul {
   line-height: 1.56;
   letter-spacing: 0.03em;
 }
-.example-link:hover .example-actions,
-.example-link:focus .example-actions {
+.example-card__link:hover .example-card__actions,
+.example-card__link:focus .example-card__actions {
   transform: translateY(0);
 }
-.example-link:hover,
-.example-link:focus {
+.example-card__link:hover,
+.example-card__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.example-image {
+.example-card__image {
   display: block;
   max-width: 100%;
 }
-.example-description {
+.example-card__description {
   padding: 20px 24px;
   border: 1px solid var(--portfolio-border-line-color);
   border-top: 0;
 }
-.example-title {
+.example-card__title {
   margin-bottom: 4px;
   color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.example-text {
+.example-card__text {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.89;
@@ -595,7 +590,7 @@ ul {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop.is-hidden {
+.backdrop--hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -614,10 +609,10 @@ ul {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop.is-hidden .modal {
+.backdrop--hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }
-.modal-button-close {
+.button-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -634,18 +629,18 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-icon {
+.button-close__icon {
   fill: currentColor;
 }
-.modal-button-close:hover,
-.modal-button-close:focus {
+.button-close:hover,
+.button-close:focus {
   color: var(--accent-color);
 }
 /* Форма в модальном окне */
 .modal-form {
   padding: 40px;
 }
-.modal-form-title {
+.modal-form__title {
   display: block;
   color: var(--title-text-color);
   font-size: 20px;
@@ -654,7 +649,7 @@ ul {
   letter-spacing: 0.03em;
   margin-bottom: 12px;
 }
-.modal-form-field {
+.form-field {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -664,49 +659,52 @@ ul {
   color: var(--title-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form-field + .modal-form-field {
+.form-field + .form-field {
   margin-top: 10px;
 }
-.modal-form-label {
+.form-field__label {
   color: var(--primary-text-color);
 }
-.modal-form-input {
+.form-field__input {
+  display: block;
   height: 40px;
   padding-left: 42px;
   margin-top: 4px;
+  line-height: inherit;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form-input.textarea {
+.form-field__input--textarea {
   height: 120px;
   resize: none;
   padding: 12px 16px;
 }
-.modal-form-input.textarea::placeholder {
+.form-field__input--textarea::placeholder {
   font-size: 12px;
   letter-spacing: 0.01em;
   line-height: 1.17;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-form-field:focus-within .modal-form-input {
+.form-field:focus-within .form-field__input {
   border-color: var(--accent-color);
 }
-.modal-form-field:focus-within {
+.form-field:focus-within {
   color: var(--accent-color);
 }
-.modal-form-field:focus-within .modal-form-input.textarea::placeholder {
+.form-field:focus-within .form-field__input--textarea::placeholder {
   font-size: 14px;
   line-height: 1.14;
 }
-.modal-input-icon {
+.form-field__icon {
   position: absolute;
   top: 38px;
   left: 12px;
   transform: translateY(-50%);
   fill: currentColor;
 }
-.modal-form-agreement {
+/* Checkbox */
+.form-agreement {
   display: flex;
   height: 24px;
   margin-top: 20px;
@@ -716,20 +714,20 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.agreement-checkbox-icon {
+.form-agreement__icon {
   margin-right: 8px;
   fill: var(--regular-white-color);
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.agreement-checkbox-input:focus + .agreement-checkbox-icon {
+.form-agreement__input:focus + .form-agreement__icon {
   border-color: var(--accent-color);
 }
-.agreement-checkbox-input:checked + .agreement-checkbox-icon {
+.form-agreement__input:checked + .form-agreement__icon {
   background-color: var(--accent-color);
   border: 0;
 }
-.agreement-checkbox-link {
+.form-agreement__link {
   color: var(--accent-color);
 }
