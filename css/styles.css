@@ -123,10 +123,10 @@ ul {
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
-.header__logo {
+.logo__type--header {
   color: var(--regular-black-color);
 }
-.footer__logo {
+.logo__type--footer {
   color: var(--regular-white-color);
 }
 /* Header */
@@ -137,7 +137,7 @@ ul {
   display: flex;
   align-items: center;
 }
-.header .logo {
+.header__logo {
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 24px;
