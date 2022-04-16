@@ -1,0 +1,54 @@
+body {
+  background-color: getColor("primary-background-color");
+  color: getColor("primary-text-color");
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.title {
+  margin-bottom: 50px;
+  color: getColor("title-text-color");
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.text {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: getColor("regular-white-color");
+  background-color: getColor("accent-color");
+  box-shadow: $button-shadow;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: getColor("button-hover-color");
+  }
+}

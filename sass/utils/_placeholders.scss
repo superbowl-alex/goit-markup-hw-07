@@ -1,0 +1,17 @@
+%list {
+  list-style: none;
+  padding: 0;
+}
+%link {
+  text-decoration: none;
+}
+&subtitle {
+  color: getColor("title-text-color");
+  letter-spacing: 0.03em;
+  font-size: inherit;
+}
+&flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,25 @@
+.features {
+  padding-top: 94px;
+}
+.features__list {
+  display: flex;
+  margin-left: calc((-1) * #{$item-gap});
+}
+.features__item {
+  flex-basis: calc(100% / 4 - #{$item-gap});
+  margin-left: $item-gap;
+}
+.features__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: getColor("secondary-background-color");
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.features__subtitle {
+  margin-bottom: 10px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
