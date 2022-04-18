@@ -1,6 +1,5 @@
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @include section(60px, 60px);
   background-color: getColor("footer-background-color");
 }
 .container--footer {
@@ -11,35 +10,36 @@
   margin-top: 20px;
 }
 .adress__list {
+  @extend %list;
   font-style: normal;
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 .adress__link {
+  @extend %link;
   color: getColor("contact-text-color");
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    color: getColor("accent-color");
+  }
 }
-.adress__link:hover,
-.adress__link:focus {
-  color: getColor("accent-color");
-}
-
 .adress__link--map {
   color: getColor("regular-white-color");
 }
-
 .adress__item:not(:last-child) {
   margin-bottom: 9px;
 }
-.footer__subtitle {
+.social-block {
+  margin-left: 70px;
+}
+.social-block__subtitle,
+.subscribe-section__subtitle {
+  @extend %subtitle;
   margin-bottom: 20px;
   color: getColor("regular-white-color");
   line-height: 1.14;
-  text-transform: uppercase;
-}
-.social-block {
-  margin-left: 70px;
 }
 .social-list__link--footer {
   color: getColor("regular-white-color");
@@ -61,8 +61,8 @@
   margin-right: 12px;
   padding-left: 16px;
   background-color: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: getColor("button-shadow");
+  border: 1px solid getColor("footer-input-color");
+  box-shadow: $button-shadow;
   border-radius: 4px;
   &::placeholder {
     font-size: 16px;

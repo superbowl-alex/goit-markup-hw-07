@@ -1,16 +1,17 @@
 .team {
+  @include section();
   text-align: center;
   background-color: getColor("secondary-background-color");
 }
 .team-list {
+  @extend %list;
   display: flex;
-  margin-left: calc((-1) * #{$item-gap});
+  @include negative-left-marg($item-gap);
 }
 .employee {
-  flex-basis: calc(100% / 4 - #{$item-gap});
+  @include grid(4, $item-gap);
   margin-left: $item-gap;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: $team-card-shaddow;
   border-radius: 0px 0px 4px 4px;
 }
 .employee__image {
@@ -18,17 +19,19 @@
   max-width: 100%;
 }
 .employee__description {
+  @include section($item-gap, $item-gap);
   max-width: 100%;
-  padding-top: $item-gap;
-  padding-bottom: $item-gap;
   background-color: getColor("regular-white-color");
   font-size: 16px;
   line-height: 1.19;
 }
-.team__subtitle {
+.employee__subtitle {
+  @extend %subtitle;
   margin-bottom: 10px;
   font-weight: 500;
+  text-transform: none;
 }
-.team__text {
+.employee__text {
+  @extend %text;
   margin-bottom: 16px;
 }

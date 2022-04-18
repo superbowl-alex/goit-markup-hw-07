@@ -1,9 +1,13 @@
+.work {
+  @include section();
+}
 .work__list {
+  @extend %list;
   display: flex;
-  margin-left: calc((-1) * #{$item-gap});
+  @include negative-left-marg($item-gap);
 }
 .work__item {
-  flex-basis: calc(100% / 3 - #{$item-gap});
+  @include grid(3, $item-gap);
   margin-left: $item-gap;
 }
 .work__image {
@@ -14,18 +18,16 @@
   position: relative;
 }
 .work__overlay {
+  @extend %flex-center;
   position: absolute;
   width: 100%;
   height: 70px;
   bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: getColor("work-overlay-color");
 }
 .work__subtitle {
+  @extend %subtitle;
   color: getColor("regular-white-color");
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
 }

@@ -1,16 +1,15 @@
 .hero {
+  @include section(200px, 200px);
   max-width: 1600px;
   height: 600px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
   background-image: linear-gradient(
       to right,
-      var(--hero-overlay-color),
-      var(--hero-overlay-color)
+      getColor("hero-overlay-color"),
+      getColor("hero-overlay-color")
     ),
-    url(../images/hero.jpg);
+    url(../../images/hero.jpg);
   background-color: getColor("hero-background-color");
   background-repeat: no-repeat;
   background-position: center;

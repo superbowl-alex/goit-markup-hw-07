@@ -1,6 +1,7 @@
 .logo {
+  @extend %link;
   display: block;
-  font-family: Raleway, sans-serif;
+  font-family: $logo-font;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
