@@ -1,8 +1,7 @@
-.features {
-  @include section(94px, 0);
+.section--no-padding-bottom {
+  padding-bottom: 0;
 }
-.features__list {
-  @extend %list;
+.features {
   display: flex;
   @include negative-left-marg($item-gap);
 }
@@ -10,14 +9,14 @@
   @include grid(4, $item-gap);
   margin-left: $item-gap;
 }
-.features__image {
+.features__box {
   @extend %flex-center;
   height: 120px;
   background-color: getColor("secondary-background-color");
   border-radius: 4px;
   margin-bottom: 30px;
 }
-.features__subtitle {
+.features__title {
   @extend %subtitle;
   margin-bottom: 10px;
   line-height: 1.14;

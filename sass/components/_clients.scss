@@ -1,16 +1,12 @@
 .clients {
-  @include section;
-}
-.clients-list {
-  @extend %list;
   display: flex;
   @include negative-left-marg($item-gap);
 }
-.clients-list__item {
+.clients__item {
   @include grid(6, $item-gap);
   margin-left: $item-gap;
 }
-.clients-list__link {
+.clients__link {
   @extend %flex-center;
   height: 92px;
   color: getColor("icon-color");
@@ -24,7 +20,7 @@
     border-color: getColor("accent-color");
   }
 }
-.clients-list__icon {
+.clients__icon {
   display: inline-block;
   fill: currentColor;
 }

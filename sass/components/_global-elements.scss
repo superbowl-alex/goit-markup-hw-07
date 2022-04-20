@@ -4,19 +4,23 @@ body {
   font-family: $primary-font;
   font-size: 14px;
 }
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
-.title {
+.section__title {
   margin-bottom: 50px;
   color: getColor("title-text-color");
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 .button {
   @extend %flex-center;

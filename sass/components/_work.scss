@@ -1,8 +1,4 @@
 .work {
-  @include section();
-}
-.work__list {
-  @extend %list;
   display: flex;
   @include negative-left-marg($item-gap);
 }
@@ -25,7 +21,7 @@
   bottom: 0;
   background-color: getColor("work-overlay-color");
 }
-.work__subtitle {
+.work__title {
   @extend %subtitle;
   color: getColor("regular-white-color");
   line-height: 1.14;

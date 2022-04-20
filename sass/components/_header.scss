@@ -1,12 +1,13 @@
 .header {
   border-bottom: 1px solid getColor("header-border-line-color");
 }
-.container--header {
+.container__header {
   display: flex;
   align-items: center;
 }
 .header__logo {
-  @include section(24px, 23px);
+  padding-top: 24px;
+  padding-bottom: 23px;
   margin-right: 93px;
 }
 .navigation {
@@ -14,7 +15,6 @@
 }
 .navigation__list,
 .contacts {
-  @extend %list;
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
@@ -26,8 +26,8 @@
   margin-right: 50px;
 }
 .navigation__link {
-  @extend %link;
-  @include section(32px, 31px);
+  padding-top: 32px;
+  padding-bottom: 31px;
   display: block;
   color: getColor("title-text-color");
   transition: color 250ms $timing-function;
@@ -59,8 +59,8 @@
   margin-right: 30px;
 }
 .contacts__link {
-  @extend %link;
-  @include section(32px, 31px);
+  padding-top: 32px;
+  padding-bottom: 31px;
   display: flex;
   align-items: center;
   color: getColor("primary-text-color");

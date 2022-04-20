@@ -1,8 +1,4 @@
-.examples {
-  @include section();
-}
 .filtre {
-  @extend %list;
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
@@ -10,7 +6,7 @@
 .filtre__item:not(:last-child) {
   margin-right: 8px;
 }
-.portfolio-button {
+.filtre__button {
   display: block;
   padding: 6px 22px;
   font-weight: 500;
@@ -31,25 +27,23 @@
     box-shadow: $portfolio-button-shadow;
   }
 }
-.portfolio-button--current {
+.filtre__button--current {
   color: getColor("regular-white-color");
   background-color: getColor("accent-color");
   box-shadow: $portfolio-button-shadow;
 }
-.example-list {
-  @extend %list;
+.gallery {
   display: flex;
   flex-wrap: wrap;
   @include negative-left-marg($item-gap);
   @include negative-top-marg($item-gap);
 }
-.example-card {
+.gallery__item {
   @include grid(3, $item-gap);
   margin-left: $item-gap;
   margin-top: $item-gap;
 }
-.example-card__link {
-  @extend %link;
+.gallery__link {
   display: block;
   transition: box-shadow 250ms $timing-function;
   &:hover,
@@ -57,11 +51,11 @@
     box-shadow: $portfolio-card-shaddow;
   }
 }
-.example-card__thumb {
+.gallery__thumb {
   position: relative;
   overflow: hidden;
 }
-.example-card__actions {
+.gallery__actions {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -69,12 +63,12 @@
   background-color: getColor("portfolio-overlay-color");
   transform: translateY(101%);
   transition: transform 250ms $timing-function;
-  .example-card__link:hover &,
-  .example-card__link:focus & {
+  .gallery__link:hover &,
+  .gallery__link:focus & {
     transform: translateY(0);
   }
 }
-.example-card__actions-text {
+.gallery__actions-text {
   @extend %position-center;
   width: 322px;
   height: 168px;
@@ -84,23 +78,23 @@
   line-height: 1.56;
   letter-spacing: 0.03em;
 }
-.example-card__image {
+.gallery__image {
   display: block;
   max-width: 100%;
 }
-.example-card__description {
+.gallery__description {
   padding: 20px 24px;
   border: 1px solid getColor("portfolio-border-line-color");
   border-top: 0;
 }
-.example-card__title {
+.gallery__title {
   margin-bottom: 4px;
   color: getColor("title-text-color");
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.example-card__text {
+.gallery__text {
   color: getColor("primary-text-color");
   font-size: 16px;
   line-height: 1.89;

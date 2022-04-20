@@ -1,5 +1,4 @@
 .social-list {
-  @extend %list;
   display: flex;
   justify-content: center;
 }
@@ -7,7 +6,7 @@
   margin-right: 10px;
 }
 .social-list__link {
-  @extend %link, %flex-center;
+  @extend %flex-center;
   height: 44px;
   width: 44px;
   border-radius: 50%;

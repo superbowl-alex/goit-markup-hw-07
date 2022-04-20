@@ -1,5 +1,6 @@
 .hero {
-  @include section(200px, 200px);
+  padding-top: 200px;
+  padding-bottom: 200px;
   max-width: 1600px;
   height: 600px;
   margin-right: auto;
@@ -17,7 +18,7 @@
   color: getColor("regular-white-color");
   text-align: center;
 }
-.hero-title {
+.hero__title {
   margin-bottom: $item-gap;
   font-weight: 900;
   font-size: 44px;

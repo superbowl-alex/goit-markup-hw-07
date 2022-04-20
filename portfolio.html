@@ -16,22 +16,22 @@
   <body>
     <!-- Блок header -->
     <header class="header">
-      <div class="container container--header">
+      <div class="container container__header">
         <!-- Основная навигация -->
         <nav class="navigation">
           <a class="logo header__logo" href="./index.html"
-            >Web<span class="logo__type logo__type--header">Studio</span></a
+            >Web<span class="logo__dark">Studio</span></a
           >
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link" href="./index.html">Студия</a>
-            </li>
-            <li class="navigation__item">
               <a
                 class="navigation__link navigation__link--current"
-                href="./portfolio.html"
-                >Портфолио</a
+                href="./index.html"
+                >Студия</a
               >
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="">Контакты</a>
@@ -60,45 +60,45 @@
     <!-- Блок main -->
     <main class="portfolio">
       <!-- Примеры работ -->
-      <section class="examples">
+      <section class="section">
         <div class="container">
-          <h1 class="title visually-hidden">Примеры работ</h1>
+          <h1 class="section__title visually-hidden">Примеры работ</h1>
           <!-- Фильтр -->
           <ul class="filtre">
             <li class="filtre__item">
               <button
-                class="portfolio-button portfolio-button--current"
+                class="filtre__button filtre__button--current"
                 type="button"
               >
                 Все
               </button>
             </li>
             <li class="filtre__item">
-              <button class="portfolio-button" type="button">Веб-сайты</button>
+              <button class="filtre__button" type="button">Веб-сайты</button>
             </li>
             <li class="filtre__item">
-              <button class="portfolio-button" type="button">Приложения</button>
+              <button class="filtre__button" type="button">Приложения</button>
             </li>
             <li class="filtre__item">
-              <button class="portfolio-button" type="button">Дизайн</button>
+              <button class="filtre__button" type="button">Дизайн</button>
             </li>
             <li class="filtre__item">
-              <button class="portfolio-button" type="button">Маркетинг</button>
+              <button class="filtre__button" type="button">Маркетинг</button>
             </li>
           </ul>
           <!-- Примеры -->
-          <ul class="example-list">
-            <li class="example-card">
-              <a href="" class="example-card__link">
-                <div class="example-card__thumb">
+          <ul class="gallery">
+            <li class="gallery__item">
+              <a href="" class="gallery__link">
+                <div class="gallery__thumb">
                   <img
-                    class="example-card__image"
+                    class="gallery__image"
                     src="./images/tehnokryak.jpg"
                     alt="Открытый ноутбук с изображениями людей"
                     width="370"
                   />
-                  <div class="example-card__actions">
-                    <p class="example-card__actions-text">
+                  <div class="gallery__actions">
+                    <p class="gallery__actions-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
                       получить исчерпывающие сведения о компании или частном
@@ -106,23 +106,23 @@
                     </p>
                   </div>
                 </div>
-                <div class="example-card__description">
-                  <h2 class="example-card__title">Технокряк</h2>
-                  <p class="example-card__text">Маркетинг</p>
+                <div class="gallery__description">
+                  <h2 class="gallery__title">Технокряк</h2>
+                  <p class="gallery__text">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="example-card">
-              <a href="" class="example-card__link">
-                <div class="example-card__thumb">
+            <li class="gallery__item">
+              <a href="" class="gallery__link">
+                <div class="gallery__thumb">
                   <img
-                    class="example-card__image"
+                    class="gallery__image"
                     src="./images/basketball.jpg"
                     alt="Два баскетболиста в игре"
                     width="370"
                   />
-                  <div class="example-card__actions">
-                    <p class="example-card__actions-text">
+                  <div class="gallery__actions">
+                    <p class="gallery__actions-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
                       получить исчерпывающие сведения о компании или частном
@@ -130,25 +130,25 @@
                     </p>
                   </div>
                 </div>
-                <div class="example-card__description">
-                  <h2 class="example-card__title">
+                <div class="gallery__description">
+                  <h2 class="gallery__title">
                     Постер <span lang="en">New Orlean vs Golden Star</span>
                   </h2>
-                  <p class="example-card__text">Дизайн</p>
+                  <p class="gallery__text">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="example-card">
-              <a href="" class="example-card__link">
-                <div class="example-card__thumb">
+            <li class="gallery__item">
+              <a href="" class="gallery__link">
+                <div class="gallery__thumb">
                   <img
-                    class="example-card__image"
+                    class="gallery__image"
                     src="./images/seafood.jpg"
                     alt="Логотип ресторана Seafood"
                     width="370"
                   />
-                  <div class="example-card__actions">
-                    <p class="example-card__actions-text">
+                  <div class="gallery__actions">
+                    <p class="gallery__actions-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
                       получить исчерпывающие сведения о компании или частном
@@ -156,25 +156,25 @@
                     </p>
                   </div>
                 </div>
-                <div class="example-card__description">
-                  <h2 class="example-card__title">
+                <div class="gallery__description">
+                  <h2 class="gallery__title">
                     Ресторан <span lang="en">Seafood</span>
                   </h2>
-                  <p class="example-card__text">Приложение</p>
+                  <p class="gallery__text">Приложение</p>
                 </div>
               </a>
             </li>
-            <li class="example-card">
-              <a href="" class="example-card__link">
-                <div class="example-card__thumb">
+            <li class="gallery__item">
+              <a href="" class="gallery__link">
+                <div class="gallery__thumb">
                   <img
-                    class="example-card__image"
+                    class="gallery__image"
                     src="./images/prime.jpg"
                     alt="Черные наушники"
                     width="370"
                   />
-                  <div class="example-card__actions">
-                    <p class="example-card__actions-text">
+                  <div class="gallery__actions">
+                    <p class="gallery__actions-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
                       получить исчерпывающие сведения о компании или частном
@@ -182,25 +182,25 @@
                     </p>
                   </div>
                 </div>
-                <div class="example-card__description">
-                  <h2 class="example-card__title">
+                <div class="gallery__description">
+                  <h2 class="gallery__title">
                     Проект <span lang="en"></span>Prime
                   </h2>
-                  <p class="example-card__text">Маркетинг</p>
+                  <p class="gallery__text">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="example-card">
-              <a href="" class="example-card__link">
-                <div class="example-card__thumb">
+            <li class="gallery__item">
+              <a href="" class="gallery__link">
+                <div class="gallery__thumb">
                   <img
-                    class="example-card__image"
+                    class="gallery__image"
                     src="./images/boxes.jpg"
                     alt="Две коробки - коричневая и белая"
                     width="370"
                   />
-                  <div class="example-card__actions">
-                    <p class="example-card__actions-text">
+                  <div class="gallery__actions">
+                    <p class="gallery__actions-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
                       получить исчерпывающие сведения о компании или частном
@@ -208,25 +208,25 @@
                     </p>
                   </div>
                 </div>
-                <div class="example-card__description">
-                  <h2 class="example-card__title">
+                <div class="gallery__description">
+                  <h2 class="gallery__title">
                     Проект <span lang="en">Boxes</span>
                   </h2>
-                  <p class="example-card__text">Приложение</p>
+                  <p class="gallery__text">Приложение</p>
                 </div>
               </a>
             </li>
-            <li class="example-card">
-              <a href="" class="example-card__link">
-                <div class="example-card__thumb">
+            <li class="gallery__item">
+              <a href="" class="gallery__link">
+                <div class="gallery__thumb">
                   <img
-                    class="example-card__image"
+                    class="gallery__image"
                     src="./images/inspiration.jpg"
                     alt="Монитор с изображением страницы сайта"
                     width="370"
                   />
-                  <div class="example-card__actions">
-                    <p class="example-card__actions-text">
+                  <div class="gallery__actions">
+                    <p class="gallery__actions-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
                       получить исчерпывающие сведения о компании или частном
@@ -234,25 +234,25 @@
                     </p>
                   </div>
                 </div>
-                <div class="example-card__description">
-                  <h2 class="example-card__title" lang="en">
+                <div class="gallery__description">
+                  <h2 class="gallery__title" lang="en">
                     Inspiration has no Borders
                   </h2>
-                  <p class="example-card__text">Веб-сайт</p>
+                  <p class="gallery__text">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="example-card">
-              <a href="" class="example-card__link">
-                <div class="example-card__thumb">
+            <li class="gallery__item">
+              <a href="" class="gallery__link">
+                <div class="gallery__thumb">
                   <img
-                    class="example-card__image"
+                    class="gallery__image"
                     src="./images/edition.jpg"
                     alt="Открытый журнал"
                     width="370"
                   />
-                  <div class="example-card__actions">
-                    <p class="example-card__actions-text">
+                  <div class="gallery__actions">
+                    <p class="gallery__actions-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
                       получить исчерпывающие сведения о компании или частном
@@ -260,25 +260,25 @@
                     </p>
                   </div>
                 </div>
-                <div class="example-card__description">
-                  <h2 class="example-card__title">
+                <div class="gallery__description">
+                  <h2 class="gallery__title">
                     Издание <span lang="en">Limited Edition</span>
                   </h2>
-                  <p class="example-card__text">Дизайн</p>
+                  <p class="gallery__text">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="example-card">
-              <a href="" class="example-card__link">
-                <div class="example-card__thumb">
+            <li class="gallery__item">
+              <a href="" class="gallery__link">
+                <div class="gallery__thumb">
                   <img
-                    class="example-card__image"
+                    class="gallery__image"
                     src="./images/lab.jpg"
                     alt="Бумажная этикетка с изображенными буквами"
                     width="370"
                   />
-                  <div class="example-card__actions">
-                    <p class="example-card__actions-text">
+                  <div class="gallery__actions">
+                    <p class="gallery__actions-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
                       получить исчерпывающие сведения о компании или частном
@@ -286,25 +286,25 @@
                     </p>
                   </div>
                 </div>
-                <div class="example-card__description">
-                  <h2 class="example-card__title">
+                <div class="gallery__description">
+                  <h2 class="gallery__title">
                     Проект <span lang="en">LAB</span>
                   </h2>
-                  <p class="example-card__text">Маркетинг</p>
+                  <p class="gallery__text">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="example-card">
-              <a href="" class="example-card__link">
-                <div class="example-card__thumb">
+            <li class="gallery__item">
+              <a href="" class="gallery__link">
+                <div class="gallery__thumb">
                   <img
-                    class="example-card__image"
+                    class="gallery__image"
                     src="./images/growing.jpg"
                     alt=""
                     width="370"
                   />
-                  <div class="example-card__actions">
-                    <p class="example-card__actions-text">
+                  <div class="gallery__actions">
+                    <p class="gallery__actions-text">
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
                       получить исчерпывающие сведения о компании или частном
@@ -312,11 +312,9 @@
                     </p>
                   </div>
                 </div>
-                <div class="example-card__description">
-                  <h2 class="example-card__title" lang="en">
-                    Growing Business
-                  </h2>
-                  <p class="example-card__text">Приложение</p>
+                <div class="gallery__description">
+                  <h2 class="gallery__title" lang="en">Growing Business</h2>
+                  <p class="gallery__text">Приложение</p>
                 </div>
               </a>
             </li>
@@ -329,7 +327,7 @@
       <div class="container container--footer">
         <div class="footer__main-block">
           <a class="logo" href="./index.html"
-            >Web<span class="logo__type logo__type--footer">Studio</span></a
+            >Web<span class="logo__light">Studio</span></a
           >
           <address class="adress">
             <ul class="adress__list">

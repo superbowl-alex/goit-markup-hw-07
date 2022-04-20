@@ -1,5 +1,4 @@
 .logo {
-  @extend %link;
   display: block;
   font-family: $logo-font;
   font-weight: 700;
@@ -8,9 +7,9 @@
   letter-spacing: 0.03em;
   color: getColor("accent-color");
 }
-.logo__type--header {
+.logo__dark {
   color: getColor("regular-black-color");
 }
-.logo__type--footer {
+.logo__light {
   color: getColor("regular-white-color");
 }
