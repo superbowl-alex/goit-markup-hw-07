@@ -6,7 +6,7 @@
 .filtre__item:not(:last-child) {
   margin-right: 8px;
 }
-.filtre__button {
+.filtre-button {
   display: block;
   padding: 6px 22px;
   font-weight: 500;
@@ -27,7 +27,7 @@
     box-shadow: $portfolio-button-shadow;
   }
 }
-.filtre__button--current {
+.filtre-button--current {
   color: getColor("regular-white-color");
   background-color: getColor("accent-color");
   box-shadow: $portfolio-button-shadow;
