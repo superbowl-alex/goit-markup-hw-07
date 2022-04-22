@@ -60,23 +60,18 @@
   width: 100%;
   height: 100%;
   bottom: 0;
+  padding: 63px 24px;
   background-color: getColor("portfolio-overlay-color");
+  color: getColor("regular-white-color");
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
   transform: translateY(101%);
   transition: transform 250ms $timing-function;
   .gallery__link:hover &,
   .gallery__link:focus & {
     transform: translateY(0);
   }
-}
-.gallery__actions-text {
-  @extend %position-center;
-  width: 322px;
-  height: 168px;
-  position: absolute;
-  color: getColor("regular-white-color");
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
 }
 .gallery__image {
   display: block;
