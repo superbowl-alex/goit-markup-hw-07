@@ -697,7 +697,6 @@ body {
 }
 
 .clients__icon {
-  display: inline-block;
   fill: currentColor;
 }
 
